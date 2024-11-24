@@ -19,37 +19,6 @@ This project builds upon **HEART’s research** to classify stereotypes in textu
    - Approach would entail coarse to fine modelling from high level theme/ stereotype_type tokens, to then the specific tokens in the sentence that leads to the classification descision (during training), with the final stereotype, anti-stereotype, or unrelated token.
    - This approach is computationally intensive and was not implemented due to its impracticality for real-time use.
 
-
-
-## Project Structure
-
-
-├── .gitignore
-├── README.md
-├── requirements.txt
-├── train_category.ipynb        # Notebook for training the category and stereotype_type classification models
-├── shap_value_inference.ipynb  # Notebook for shap value calculation
-├── emissions.csv               # Carbon emissions report
-├── models/                     
-│   ├── lgb_model_stereotype_tfidf_cosine.pkl        
-├── data/                       # Directory containing datasets
-│   ├── EMGSD_train.csv         # Training dataset
-│   ├── EMGSD_test.csv          # Test dataset
-│   ├── featurized_data/        # Preprocessed and feature-extracted data
-│   │   ├── x_train_embedd.npy
-│   │   ├── similarity_train.csv
-│   │   └── ...                 # Other files
-│   └── customized/
-│       └── source_finder/      # Source finder for customized analysis
-│           └── nationalities_Chinese_source_finder.json
-├── embeddings/                 # Precomputed embeddings
-│   ├── embeddings.pickle
-│   └── embeddings_cat.pickle
-├── pycache/                    # Cached Python modules
-│   ├── tfidf_processor.cpython-313.pyc
-│   └── feature_combiner.cpython-313.pyc
-
-
 ## Methodology
 
 ### 1. Generative Model Approach (Not Implemented)
